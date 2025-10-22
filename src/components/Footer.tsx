@@ -29,7 +29,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           {/* Company Info */}
           <div className="space-y-4">
-            <div className="flex items-center gap-3">
+            <div className="inline-block bg-white rounded-lg p-3">
               <img 
                 src={logo} 
                 alt="Ecofácil Logo" 
