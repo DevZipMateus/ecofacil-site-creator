@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
-import { Leaf, Sparkles, Shield } from "lucide-react";
+import { Leaf, Shield } from "lucide-react";
 import heroBackground from "@/assets/hero-background.jpg";
+import whatsappIcon from "@/assets/whatsapp-icon.png";
 
 const Hero = () => {
   return (
@@ -48,7 +49,7 @@ const Hero = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in" style={{ animationDelay: "0.6s" }}>
             <a href="https://wa.me/5554996603057" target="_blank" rel="noopener noreferrer">
               <Button variant="hero" size="lg" className="w-full sm:w-auto">
-                <Sparkles className="w-5 h-5" />
+                <img src={whatsappIcon} alt="WhatsApp" className="w-5 h-5" />
                 Fale conosco
               </Button>
             </a>
@@ -76,7 +77,7 @@ const Hero = () => {
             {[
               { icon: Leaf, title: "Sustentável", desc: "Compromisso ambiental" },
               { icon: Shield, title: "Qualidade", desc: "Produtos certificados" },
-              { icon: Sparkles, title: "Eficiência", desc: "Soluções completas" },
+              { icon: Shield, title: "Eficiência", desc: "Soluções completas" },
             ].map((feature, idx) => (
               <div
                 key={idx}

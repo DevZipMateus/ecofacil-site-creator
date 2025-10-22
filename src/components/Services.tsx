@@ -1,6 +1,7 @@
 import { Sparkles, Package, FileText, Trash2, Box, Leaf } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import whatsappIcon from "@/assets/whatsapp-icon.png";
 
 const Services = () => {
   const services = [
@@ -95,7 +96,7 @@ const Services = () => {
             </p>
             <a href="https://wa.me/5554996603057" target="_blank" rel="noopener noreferrer">
               <Button variant="default" size="lg">
-                <Sparkles className="w-5 h-5" />
+                <img src={whatsappIcon} alt="WhatsApp" className="w-5 h-5" />
                 Fale com nossa equipe
               </Button>
             </a>
