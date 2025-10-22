@@ -55,7 +55,7 @@ const Header = () => {
             <img 
               src={logo} 
               alt="Ecofácil Loja e Consultoria Ambiental" 
-              className="h-12 w-auto"
+              className="h-10 sm:h-12 w-auto"
             />
           </button>
 
