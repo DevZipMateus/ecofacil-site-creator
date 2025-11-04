@@ -1,6 +1,5 @@
 import { Target, Lightbulb, Heart, Leaf, TrendingUp, Award } from "lucide-react";
 import { Card } from "@/components/ui/card";
-import aboutProducts from "@/assets/about-products.jpg";
 
 const About = () => {
   const values = [
@@ -51,28 +50,17 @@ const About = () => {
         </div>
 
         {/* Story */}
-        <div className="max-w-6xl mx-auto mb-12 sm:mb-16 md:mb-20 animate-fade-in">
-          <Card className="p-6 sm:p-8 md:p-12 shadow-medium bg-gradient-card overflow-hidden">
-            <div className="grid md:grid-cols-2 gap-6 sm:gap-8 items-center">
-              <div>
-                <p className="text-foreground leading-relaxed mb-6">
-                  Fundada em 2025, a <strong>Ecofácil Loja e Consultoria Ambiental</strong> nasceu com o propósito de unir sustentabilidade, qualidade e praticidade em um só lugar. A partir da ideia de um negócio voltado ao cuidado com o meio ambiente e à necessidade de oferecer produtos de limpeza de alta qualidade, a empresa se consolidou como uma parceira confiável para residências e empresas que buscam soluções eficientes e conscientes.
-                </p>
-                <p className="text-foreground leading-relaxed mb-6">
-                  Ao longo de sua trajetória, a Ecofácil expandiu seu portfólio, oferecendo produtos de limpeza, embalagens, papéis em geral, sacos de lixo e uma ampla variedade de materiais voltados ao dia a dia. Além disso, atua na consultoria ambiental, promovendo práticas responsáveis e sustentáveis que contribuem para um futuro mais verde e equilibrado.
-                </p>
-                <p className="text-foreground leading-relaxed">
-                  Com uma atuação moderna e comprometida, a Ecofácil busca ser referência regional pela qualidade dos produtos, atendimento de excelência e respeito ao meio ambiente — valores que estão presentes em cada ação, produto e projeto desenvolvido.
-                </p>
-              </div>
-              <div className="order-first md:order-last">
-                <img 
-                  src={aboutProducts} 
-                  alt="Produtos de limpeza sustentáveis da Ecofácil" 
-                  className="rounded-xl shadow-soft w-full h-auto"
-                />
-              </div>
-            </div>
+        <div className="max-w-4xl mx-auto mb-12 sm:mb-16 md:mb-20 animate-fade-in">
+          <Card className="p-6 sm:p-8 md:p-12 shadow-medium bg-gradient-card">
+            <p className="text-foreground leading-relaxed mb-6">
+              Fundada em 2025, a <strong>Ecofácil Loja e Consultoria Ambiental</strong> nasceu com o propósito de unir sustentabilidade, qualidade e praticidade em um só lugar. A partir da ideia de um negócio voltado ao cuidado com o meio ambiente e à necessidade de oferecer produtos de limpeza de alta qualidade, a empresa se consolidou como uma parceira confiável para residências e empresas que buscam soluções eficientes e conscientes.
+            </p>
+            <p className="text-foreground leading-relaxed mb-6">
+              Ao longo de sua trajetória, a Ecofácil expandiu seu portfólio, oferecendo produtos de limpeza, embalagens, papéis em geral, sacos de lixo e uma ampla variedade de materiais voltados ao dia a dia. Além disso, atua na consultoria ambiental, promovendo práticas responsáveis e sustentáveis que contribuem para um futuro mais verde e equilibrado.
+            </p>
+            <p className="text-foreground leading-relaxed">
+              Com uma atuação moderna e comprometida, a Ecofácil busca ser referência regional pela qualidade dos produtos, atendimento de excelência e respeito ao meio ambiente — valores que estão presentes em cada ação, produto e projeto desenvolvido.
+            </p>
           </Card>
         </div>
 

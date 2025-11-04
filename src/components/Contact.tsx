@@ -2,7 +2,6 @@ import { Phone, Mail, MapPin, Clock, Instagram, Facebook } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import whatsappIcon from "@/assets/whatsapp-icon.png";
-import contactStore from "@/assets/contact-store.jpg";
 
 const Contact = () => {
   const contactInfo = [
@@ -140,29 +139,19 @@ const Contact = () => {
           </div>
 
           {/* CTA */}
-          <Card className="p-0 text-center shadow-medium animate-fade-in overflow-hidden" style={{ animationDelay: "0.6s" }}>
-            <div className="relative">
-              <img 
-                src={contactStore} 
-                alt="Loja Ecofácil - produtos de limpeza e consultoria ambiental" 
-                className="w-full h-64 sm:h-80 object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-primary/95 to-primary/60" />
-              <div className="absolute inset-0 flex flex-col items-center justify-center p-6 sm:p-8 md:p-12">
-                <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-3 sm:mb-4 px-4">
-                  Pronto para encontrar a solução ideal?
-                </h3>
-                <p className="text-white/90 mb-6 sm:mb-8 text-base sm:text-lg max-w-2xl mx-auto px-4">
-                  Nossa equipe está à disposição para atendê-lo com produtos de qualidade e consultoria especializada
-                </p>
-                <a href="https://wa.me/5554996603057" target="_blank" rel="noopener noreferrer">
-                  <Button variant="hero" size="lg">
-                    <img src={whatsappIcon} alt="WhatsApp" className="w-5 h-5" />
-                    Falar no WhatsApp
-                  </Button>
-                </a>
-              </div>
-            </div>
+          <Card className="p-6 sm:p-8 md:p-12 text-center shadow-medium animate-fade-in bg-gradient-to-br from-primary to-primary-light" style={{ animationDelay: "0.6s" }}>
+            <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-3 sm:mb-4 px-4">
+              Pronto para encontrar a solução ideal?
+            </h3>
+            <p className="text-white/90 mb-6 sm:mb-8 text-base sm:text-lg max-w-2xl mx-auto px-4">
+              Nossa equipe está à disposição para atendê-lo com produtos de qualidade e consultoria especializada
+            </p>
+            <a href="https://wa.me/5554996603057" target="_blank" rel="noopener noreferrer">
+              <Button variant="hero" size="lg">
+                <img src={whatsappIcon} alt="WhatsApp" className="w-5 h-5" />
+                Falar no WhatsApp
+              </Button>
+            </a>
           </Card>
         </div>
       </div>
