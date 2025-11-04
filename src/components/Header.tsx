@@ -1,13 +1,11 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import logo from "@/assets/logo.png";
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const location = useLocation();
-  const isVitrinePage = location.pathname === "/vitrine";
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
@@ -30,45 +28,47 @@ const Header = () => {
   };
   const menuItems = [{
     label: "Início",
-    id: "hero"
+    id: "hero",
+    path: "/"
   }, {
     label: "Sobre",
-    id: "about"
+    id: "about",
+    path: "/"
   }, {
     label: "Serviços",
-    id: "services"
+    id: "services",
+    path: "/"
   }, {
     label: "Contato",
-    id: "contact"
+    id: "contact",
+    path: "/"
   }];
 
-  const handleLogoClick = () => {
-    if (isVitrinePage) {
-      window.location.href = "/";
-    } else {
-      scrollToSection("hero");
+  const handleMenuClick = (path: string, id: string) => {
+    if (path === "/") {
+      window.location.href = `/${id === "hero" ? "" : `#${id}`}`;
     }
   };
   return <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? "bg-white/95 backdrop-blur-md shadow-medium" : "bg-white/80 backdrop-blur-sm"}`}>
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <button onClick={handleLogoClick} className="flex items-center gap-3 hover:opacity-80 transition-opacity">
+          <Link to="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
             <img src={logo} alt="Ecofácil Loja e Consultoria Ambiental" className="h-24 sm:h-12 w-auto" />
-          </button>
+          </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
-            {!isVitrinePage && menuItems.map(item => <button key={item.id} onClick={() => scrollToSection(item.id)} className="text-foreground hover:text-primary font-medium transition-colors relative group">
+            {menuItems.map(item => (
+              <button 
+                key={item.id} 
+                onClick={() => handleMenuClick(item.path, item.id)} 
+                className="text-foreground hover:text-primary font-medium transition-colors relative group"
+              >
                 {item.label}
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full" />
-              </button>)}
-            {isVitrinePage && (
-              <Link to="/" className="text-foreground hover:text-primary font-medium transition-colors relative group">
-                Voltar ao Site
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full" />
-              </Link>
-            )}
+              </button>
+            ))}
             <Link to="/vitrine" className="text-foreground hover:text-primary font-medium transition-colors relative group">
               Vitrine
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full" />
@@ -89,14 +89,18 @@ const Header = () => {
         {/* Mobile Navigation */}
         {isMobileMenuOpen && <nav className="md:hidden py-4 border-t border-border animate-fade-in">
             <div className="flex flex-col gap-4">
-              {!isVitrinePage && menuItems.map(item => <button key={item.id} onClick={() => scrollToSection(item.id)} className="text-left py-2 px-4 text-foreground hover:text-primary hover:bg-accent/10 rounded-lg font-medium transition-all">
+              {menuItems.map(item => (
+                <button 
+                  key={item.id} 
+                  onClick={() => {
+                    handleMenuClick(item.path, item.id);
+                    setIsMobileMenuOpen(false);
+                  }} 
+                  className="text-left py-2 px-4 text-foreground hover:text-primary hover:bg-accent/10 rounded-lg font-medium transition-all"
+                >
                   {item.label}
-                </button>)}
-              {isVitrinePage && (
-                <Link to="/" onClick={() => setIsMobileMenuOpen(false)} className="text-left py-2 px-4 text-foreground hover:text-primary hover:bg-accent/10 rounded-lg font-medium transition-all">
-                  Voltar ao Site
-                </Link>
-              )}
+                </button>
+              ))}
               <Link to="/vitrine" onClick={() => setIsMobileMenuOpen(false)} className="text-left py-2 px-4 text-foreground hover:text-primary hover:bg-accent/10 rounded-lg font-medium transition-all">
                 Vitrine
               </Link>
