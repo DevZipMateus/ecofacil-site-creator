@@ -32,9 +32,9 @@ const Vitrine = () => {
   }, []);
 
   return (
-    <div className="h-screen overflow-hidden flex flex-col">
+    <div className="h-screen w-screen overflow-hidden flex flex-col fixed inset-0">
       <Header />
-      <main className="flex-1 mt-20">
+      <main className="flex-1 mt-20 overflow-hidden">
         <iframe
           src="https://tailorbergmeisgmailcom.egestor.com.br/vitrine/"
           style={{
