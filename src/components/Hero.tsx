@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
-import { Leaf, Shield } from "lucide-react";
+import { Leaf, Shield, Store } from "lucide-react";
+import { Link } from "react-router-dom";
 import heroBackground from "@/assets/hero-background.jpg";
 import whatsappIcon from "@/assets/whatsapp-icon.png";
 
@@ -53,6 +54,12 @@ const Hero = () => {
                 Fale conosco
               </Button>
             </a>
+            <Link to="/vitrine">
+              <Button variant="hero" size="lg" className="w-full sm:w-auto">
+                <Store className="w-5 h-5" />
+                Ver Vitrine
+              </Button>
+            </Link>
             <Button
               variant="hero"
               size="lg"
