@@ -1,6 +1,12 @@
 import { useEffect, useState } from "react";
 import Header from "@/components/Header";
 
+declare global {
+  interface Window {
+    montesiteLoaded?: boolean;
+  }
+}
+
 const Vitrine = () => {
   const [iframeHeight, setIframeHeight] = useState(
     window.innerHeight - 80 - 63
@@ -12,6 +18,16 @@ const Vitrine = () => {
     };
 
     window.addEventListener("resize", handleResize);
+    
+    // Load Monte Site badge script
+    if (!window.montesiteLoaded) {
+      const script = document.createElement("script");
+      script.src = "https://vaabpicspdbolvutnscp.supabase.co/functions/v1/get-footer-iframe";
+      script.async = true;
+      document.body.appendChild(script);
+      window.montesiteLoaded = true;
+    }
+    
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
@@ -29,6 +45,8 @@ const Vitrine = () => {
           title="Demonstração de Vitrine"
         />
       </main>
+      {/* Monte Site Badge */}
+      <div id="montesite-footer-badge"></div>
     </div>
   );
 };
