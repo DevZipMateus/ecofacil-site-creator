@@ -49,7 +49,7 @@ const Header = () => {
       window.location.href = `/${id === "hero" ? "" : `#${id}`}`;
     }
   };
-  return <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? "bg-white/95 backdrop-blur-md shadow-medium" : "bg-white/80 backdrop-blur-sm"}`}>
+  return <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white ${isScrolled ? "shadow-medium" : "shadow-sm"}`}>
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
