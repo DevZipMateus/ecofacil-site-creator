@@ -43,7 +43,7 @@ const Header = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <button onClick={() => scrollToSection("hero")} className="flex items-center gap-3 hover:opacity-80 transition-opacity">
-            <img src={logo} alt="Ecofácil Loja e Consultoria Ambiental" className="h-20 sm:h-12 w-auto" />
+            <img src={logo} alt="Ecofácil Loja e Consultoria Ambiental" className="h-24 sm:h-12 w-auto" />
           </button>
 
           {/* Desktop Navigation */}
