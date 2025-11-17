@@ -69,13 +69,13 @@ const Footer = () => {
             <ul className="space-y-3">
               <li>
                 <a 
-                  href="https://wa.me/5554996603057"
+                  href="https://wa.me/5554996860357"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-start gap-2 text-primary-foreground/80 hover:text-accent transition-colors text-sm group"
                 >
                   <Phone className="w-4 h-4 mt-0.5 flex-shrink-0 group-hover:scale-110 transition-transform" />
-                  <span>(54) 99966-0357</span>
+                  <span>(54) 9.9686-0357</span>
                 </a>
               </li>
               <li>
