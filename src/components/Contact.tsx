@@ -8,8 +8,8 @@ const Contact = () => {
     {
       icon: Phone,
       title: "Telefone",
-      content: "(54) 99966-0357",
-      link: "https://wa.me/5554996603057",
+      content: "(54) 9.9686-0357",
+      link: "https://wa.me/5554996860357",
     },
     {
       icon: Mail,

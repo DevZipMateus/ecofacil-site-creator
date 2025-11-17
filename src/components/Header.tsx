@@ -73,7 +73,7 @@ const Header = () => {
               Vitrine
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full" />
             </Link>
-            <a href="https://wa.me/5554996603057" target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/5554996860357" target="_blank" rel="noopener noreferrer">
               <Button variant="default" size="sm">
                 Entre em contato
               </Button>
@@ -104,7 +104,7 @@ const Header = () => {
               <Link to="/vitrine" onClick={() => setIsMobileMenuOpen(false)} className="text-left py-2 px-4 text-foreground hover:text-primary hover:bg-accent/10 rounded-lg font-medium transition-all">
                 Vitrine
               </Link>
-              <a href="https://wa.me/5554996603057" target="_blank" rel="noopener noreferrer" className="mt-2">
+              <a href="https://wa.me/5554996860357" target="_blank" rel="noopener noreferrer" className="mt-2">
                 <Button variant="default" className="w-full">
                   Entre em contato
                 </Button>
